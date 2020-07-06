@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+    color: #4b0082
+}
+
+.container {
+    margin: 2em;
+}
+.container > .page-title {
+    text-align: center;
+    color: rgb(63,81,181);
+}
+
+.container > .page-content {
+    display: flex;
+    background-color: #b19cd9;
+}
+
+.container > .page-content .form-content, .cards-content {
+    margin: 2em;
+}
+
+.form-card {
+    border: 1px solid #eaeaea;
+    border-bottom-width: 2px;
+    padding: 1em;
+    background: #FFFAF0;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+.form-card .form-title {
+    border-bottom: 1px solid #DDD;
+    padding: 5px 0 0.5em;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#form {
+    width: 60%;
+}
+
+#form .form-content .form-group {
+    margin-bottom: 2em;
+}
+
+#form .form-content .row{
+    display: flex;
+}
+
+#form .form-content .card-number-container {
+    width: 80%;
+}
+
+#form .form-content .card-type {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#form .form-content .card-type #cardImg {
+    height: 60px
+}
+
+#form label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #7800d0;
+}
+
+#form input {
+    display: block;
+    margin-top: 10px;
+    background: none;
+    padding: 2px 2px 1px;
+    border-width: 0 0 1px;
+    line-height: 26px;
+    height: 30px;
+    border-radius: 0;
+    /* border-color: #980cff; */
+    border-style: solid;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4b0082;
+}
+
+#form input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+#form input:focus {
+    outline: none;
+}
+
+#form input[id="cardNumber"], input[id="name"] {
+    width: 60%;
+}
+
+#form input[id="expiryMonth"], input[id="expiryYear"] {
+    float: left;
+    width: 20%;
+}
+
+#form input[id="cvvInput"] {
+    width: 45%;
+}
+
+#form .multiple-input, #form .input-container {
+    display: flex;
+}
+
+#form .multiple-input .expiryDate-container {
+    width: 30%;
+}
+
+#form .separator{
+    margin: 12px 6px;
+    font-size: 1.5em;
+    color: #969696;
+    display: inline-block;
+    border-width: 0 0 1px;
+}
+
+#form #save {
+    color: rgba(255,255,255,0.87);
+    background-color: rgb(63,81,181);
+    font-size: 1em;
+    margin: 0px;
+    min-width: 40px;
+    padding: 0.2em 1.2em;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    min-height: 36px;
+    line-height: 36px;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1), background-color .4s cubic-bezier(.25, .8, .25, 1);
+}
+
+.cards-container {
+    width: 40%;
+}
+
+.cards-container .title {
+    text-align: center;
+}
+
+.cards-container #savedCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-container #savedCards .card {
+    width: 60%;
+    border: 1px solid rgb(63,81,181);
+    border-bottom-width: 2px;
+    padding: 1em;
+    color: rgb(63,81,181);
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 1.5em;
+}
+
+.cards-container #savedCards .card .card-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.cards-container #savedCards .card .card-title-container .card-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cards-container #savedCards .card .card-title-container .card-type-logo {
+    height: 40px;
+}
+
+.cards-container #savedCards .card .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5em;
+}
+
+.cards-container #savedCards .card .footer .column-class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cards-container #savedCards .card .footer .column-class .label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.cards-container #savedCards .card .footer .delete-img {
+    width: 20px;
+    height: 24px;
+}
+
+.cards-container #savedCards .card .footer .delete-button-container {
+    display: flex;
+    justify-content: center;
+}
+
